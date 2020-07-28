@@ -1,0 +1,165 @@
+body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: #FAFAFA;
+    font: 14px "Tahoma";
+}
+* {
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+}
+h1{
+    font-size: 32px;
+}
+.page {
+    width: 210mm;
+    min-height: 297mm;
+    padding: 0.2mm;
+    margin: 10mm auto;
+    border: 1px #D3D3D3 solid;
+    border-radius: 5px;
+    background: white;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+.subpage {
+    border: 1px black solid;
+    height: 296.5mm;
+    padding: 0.6mm;
+}
+
+@page {
+    size: A4;
+    margin: 0;
+}
+@media print {
+    html, body {
+        width: 210mm;
+        height: 297mm;        
+    }
+    .no-print, .no-print *
+    {
+        display: none !important;
+    }
+    .page {
+        background-color: white !important;
+        margin: 0;
+        border: initial;
+        border-radius: initial;
+        width: initial;
+        min-height: initial;
+        box-shadow: initial;
+        background: initial;
+        page-break-after: always;
+        -webkit-print-color-adjust: exact; 
+            print-color-adjust: exact;
+    }
+    textarea {
+        resize: none;
+        border-style: none;
+        background: none !important;
+    }
+    input{
+        background: none !important;
+    }
+    .data, .remont, .zakazhik, .nomer {
+        background: none !important;
+    }
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+input{
+    border: none;
+    border-bottom: 1px black solid;
+    min-width:50px!important;
+    max-width:99.99%!important;
+    transition: width 0.25s;
+    text-align:center;
+}
+.input_bn{
+    border: none;
+}
+.inputh1{
+    font-weight: bold;
+    font-size: 24px;
+}
+.input,
+.input-buffer{
+    letter-spacing: 0.05em;
+}
+.input-buffer{
+    position: absolute;
+    display: none;
+    top: -1000px;
+    left: -1000px;
+    visibility: hidden;
+    white-space: nowrap;
+}
+
+.h1number{
+    margin-top: 0px;
+    margin-bottom: 0px;
+    margin-left: 15px;
+}
+
+.forma{
+    top: 30%;
+    position: fixed;
+}
+
+.price_place{
+    display: flex;
+}
+.price_place_border{
+    display: flex;
+    border: 1px black solid;
+    
+}
+.price_place_border_money{
+    font-size: 20px;
+    padding: 5px;
+    font-weight: bold;
+    align-self: center;
+    white-space: nowrap;
+    margin: 0;
+    padding: 5px;
+}
+.price_place_border_podpis{
+    border-left: double;
+    font-weight: bold;
+    margin: 0;
+    padding: 20px 80px 20px 0;
+    background-color: rgb(214, 214, 214);
+}
+
+textarea{
+    background-color: rgb(250, 255, 176);
+}
+input{
+    background-color: rgb(250, 255, 176);
+}
+
+.data, .remont, .zakazhik, .nomer {
+    background-color: rgb(250, 255, 176);
+}
+
+.printbtn{
+    position: fixed;
+    z-index: 600;
+    left: 93vw;
+    top: 90vh;
+    width: 5%;
+    cursor: pointer;
+}
